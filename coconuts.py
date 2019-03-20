@@ -52,7 +52,7 @@ while True:
                         x = q / 4
                         p = ((x * 5) + 1)
                         print("A tour boat crashes on a deserted island.")
-                        print("During the day, the five stranded tourists", int(p), "coconuts")
+                        print("During the day, the five stranded tourists gather", int(p), "coconuts")
                         print("During the night, each greedy tourist decides to hide some coconuts for him/herself.")
                         print("Secretly by turns, each tourist divides the pile into five equal parts, burries his/her part, and leaves the rest in a pile.")
                         print("They give a coconut to a watching monkey, so it doesn't wake the rest of the tourists.")
