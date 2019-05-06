@@ -4,11 +4,12 @@
 # fib(2) are both 1. Write a recursive function that you can call with an
 # integer argument n that returns the nth number of the Fibonacci sequence.
 
-def nth(n):
+def nth(n, depth):
+    indent = depth * 2 * " "
     number = 0
     if n == 1 or n == 2:
         return 1
-    number += nth(n-1) + nth(n-2)
+    number += nth(n-1, depth + 1) + nth(n-2, depth + 1)
     return number
 
 
@@ -27,7 +28,9 @@ def fib(num):
     return sequence
 
 if __name__ == "__main__":
-    print("The 7th number of the Fibonacci sequence is: ", end = '')
-    print(nth(17))
-    print("The whole sequence up to the 7th number is: ", end = '')
-    print(fib(17))
+    howMany = 14
+    ending = "th"
+    print("The {}{} number of the Fibonacci sequence is: ".format(howMany, ending), end = '')
+    print(nth(howMany, 0))
+    print("The whole sequence up to the {}{} number is: ".format(howMany, ending), end = '')
+    print(fib(howMany))
